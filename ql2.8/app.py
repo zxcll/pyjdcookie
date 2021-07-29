@@ -28,7 +28,7 @@ def cxck():
     cookies=request.args.get('cookies')
     jd_ua=request.args.get('jd_ua')
 
-    data=ql.cxck(token,okl_token,cookies)
+    data=ql.cxck(token,okl_token,cookies,jd_ua)
 
     return data
 
