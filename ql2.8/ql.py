@@ -24,8 +24,7 @@ def qltoken():
 
 
 # 查询并获取京东cookie
-def cxck(token, okl_token,cookies):
-    jd_ua = "JD4iPhone/167724 (iPhone; iOS 15.0; Scale/3.00)Accept-Language: zh-Hans-CN;q=1"
+def cxck(token, okl_token,cookies,jd_ua):
     t = round(time.time())
     url = 'https://plogin.m.jd.com/cgi-bin/m/tmauthchecktoken?&token={0}&ou_state=0&okl_token={1}'.format(token,okl_token)
     body1 = {
