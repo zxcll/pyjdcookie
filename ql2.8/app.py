@@ -10,11 +10,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def jdlog():
-    token,okl_token,cookies,cookieurl=jdck.ck()
+    token,okl_token,cookies,cookieurl,jd_ua=jdck.ck()
     list={
         "token":""+token,
         "okl_token":""+okl_token,
-        "cookies":""+cookies
+        "cookies":""+cookies,
+        "jd_ua":""+jd_ua
     }
 
 
@@ -25,6 +26,7 @@ def cxck():
     token=request.args.get('token')
     okl_token=request.args.get('okl_token')
     cookies=request.args.get('cookies')
+    jd_ua=request.args.get('jd_ua')
 
     data=ql.cxck(token,okl_token,cookies)
 
